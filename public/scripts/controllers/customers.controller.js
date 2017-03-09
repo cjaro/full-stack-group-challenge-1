@@ -2,6 +2,6 @@ myApp.controller('CustomerController', ['$http', 'WarehouseFactory', function($h
   console.log('customer controller loaded');
   var self = this;
 
-  self.customersList = WarehouseFactory.allCustomers; //placeholder 
+  self.customersList = WarehouseFactory.allCustomers; //placeholder
 
 });

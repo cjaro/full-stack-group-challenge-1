@@ -1,12 +1,7 @@
-var router = require('express').Router();
-var pg = require('pg');
+myApp.controller('CustomerController', ['$http', 'WarehouseFactory', function($http, WarehouseFactory){
+  console.log('customer controller loaded');
+  var self = this;
 
-var config = {
-  database: 'phi',
-  host: 'localhost',
-  port: 5432,
-  max: 10,
-  idleTimeoutMillis: 30000
-};
+  self.customersList = WarehouseFactory.allCustomers; //placeholder 
 
-var pool = new pg.Pool(config);
+});

@@ -1,4 +1,26 @@
 <h1>this is the customers view</h1>
 
+<div class="container">
+
 <h1>Customers</h1>
 {{customersList}}
+
+<div class="table-responsive">
+
+    <table class="table table-bordered">
+      <thead>
+      <th class="active"></th>
+      <th class="active"></th>
+      <th class="active"></th>
+    </thead>
+
+    <tbody>
+      <tr ng-repeat="customer in cc.customersList.list">
+        <td class="active">{{customer.name}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+</div>

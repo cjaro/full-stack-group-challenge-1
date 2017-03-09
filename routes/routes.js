@@ -11,6 +11,7 @@ var config = {
 
 var pool = new pg.Pool(config);
 
+
 // WAREHOUSE VIEW
 // SELECT *
 // FROM warehouse;
@@ -20,3 +21,9 @@ var pool = new pg.Pool(config);
 // FROM customers;
 
 // ORDERS VIEW
+// SELECT *
+// FROM products
+// JOIN line_items ON line_items.product_id = products.id
+// JOIN orders ON line_items.order_id = orders.id
+// JOIN addresses ON orders.address_id=addresses.id
+// JOIN customers ON addresses.customer_id = customers.id;

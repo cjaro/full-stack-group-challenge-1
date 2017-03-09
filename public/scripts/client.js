@@ -1,4 +1,4 @@
-var myApp = angular.module('WarehouseApp', ['ngRoute']);
+var myApp = angular.module('warehouseApp', ['ngRoute']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider

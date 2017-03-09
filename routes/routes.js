@@ -2,7 +2,7 @@ var router = require('express').Router();
 var pg = require('pg');
 
 var config = {
-  database: 'phi',
+  database: 'warehouse',
   host: 'localhost',
   port: 5432,
   max: 10,
@@ -15,6 +15,8 @@ var pool = new pg.Pool(config);
 // SELECT *
 // FROM warehouse;
 
-// CUSTOMERS VIEW
+// CUSTOMER VIEW
 // SELECT *
 // FROM customers;
+
+// ORDERS VIEW

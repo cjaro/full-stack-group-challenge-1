@@ -10,3 +10,13 @@ var config = {
 };
 
 var pool = new pg.Pool(config);
+
+// WAREHOUSE VIEW
+// SELECT *
+// FROM warehouse;
+
+// CUSTOMER VIEW
+// SELECT *
+// FROM customers;
+
+// ORDERS VIEW

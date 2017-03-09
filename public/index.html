@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+
     <meta charset="utf-8">
     <title>warehouse project</title>
     <script src="vendors/angular.min.js" charset="utf-8"></script>
@@ -12,8 +13,17 @@
     <script src="scripts/controllers/orders.controller.js" charset="utf-8"></script>
     <link rel="stylesheet" href="/vendors/bootstrap.min.css">
     <link rel="stylesheet" href="/styles/stylesheet.css">
+
   </head>
+
   <body>
+
     <h1> this is the coolest warehouse ever </h1>
+
+    <header class="jumbotron text-center" ng-include="'/views/templates/header.html'"></header>
+    <nav class="navbar navbar-default" ng-include="'/views/templates/nav.html'"></nav>
+    <main ng-view></main>
+
   </body>
+  
 </html>

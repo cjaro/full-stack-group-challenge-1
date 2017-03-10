@@ -1,0 +1,28 @@
+<table>
+  <thead>
+    <tr>
+      <th>Order Date</th>
+      <th>Description</th>
+      <th>Street</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Zip</th>
+      <th>Address Type</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="data in oc.ordersObject.list">
+      <td>{{oc.convertDate(data.order_date)}}</td>
+      <td>{{data.description}}</td>
+      <td>{{data.street}}</td>
+      <td>{{data.city}}</td>
+      <td>{{data.state}}</td>
+      <td>{{data.zip}}</td>
+      <td>{{data.address_type}}</td>
+      <td>{{data.first_name}}</td>
+      <td>{{data.last_name}}</td>
+    </tr>
+  </tbody>
+</table>

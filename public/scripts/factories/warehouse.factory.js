@@ -4,6 +4,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
   var customersObject = { list: [] };
   var ordersObject = { list: [] };
 
+
   function getCustomers() {
     $http({
       method: 'GET',

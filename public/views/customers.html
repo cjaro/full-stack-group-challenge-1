@@ -1,15 +1,12 @@
-
-
-    <table class="table table-bordered">
-      <thead>
-      <th>first name</th>
-      <th>last name</th>
-    </thead>
-
-    <tbody>
-      <tr ng-repeat="data in cc.customersObject.list">
-        <td class="active">{{data.first_name}}</td>
-        <td class="active">{{data.last_name}}</td>
-        </tr>
-      </tbody>
-    </table>
+<table class="table table-bordered">
+  <thead>
+    <th>First Name</th>
+    <th>Last Name</th>
+  </thead>
+  <tbody>
+    <tr ng-repeat="data in cc.customersObject.list">
+      <td>{{data.first_name}}</td>
+      <td>{{data.last_name}}</td>
+    </tr>
+  </tbody>
+</table>

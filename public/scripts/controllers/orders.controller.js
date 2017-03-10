@@ -2,10 +2,14 @@ myApp.controller('OrderController', ['WarehouseFactory', function(WarehouseFacto
 
   var self = this;
 
-  self.getOrderData();
-  
-  self.getOrderData = function (){
-    WarehouseFactory.getOrders();
+
+  self.convertDate = function(orderDate){
+    orderDate = orderDate.slice(0, 10);
+    return orderDate;
   }
+
+  WarehouseFactory.getOrders();
+
+  self.ordersObject = WarehouseFactory.ordersObject;
 
 }])

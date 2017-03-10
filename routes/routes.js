@@ -11,6 +11,7 @@ var config = {
 
 var pool = new pg.Pool(config);
 
+router.get('/');
 
 // WAREHOUSE VIEW
 // SELECT *
@@ -27,3 +28,6 @@ var pool = new pg.Pool(config);
 // JOIN orders ON line_items.order_id = orders.id
 // JOIN addresses ON orders.address_id=addresses.id
 // JOIN customers ON addresses.customer_id = customers.id;
+
+
+module.exports = router;

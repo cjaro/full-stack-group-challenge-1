@@ -1,26 +1,22 @@
 <h1>this is the customers view</h1>
 
-<div class="container">
-
 <h1>Customers</h1>
-{{customersList}}
+{{dummyCustomers}}
 
-<div class="table-responsive">
+<div class="container">
 
     <table class="table table-bordered">
       <thead>
-      <th class="active"></th>
-      <th class="active"></th>
-      <th class="active"></th>
+      <th>first name</th>
+      <th>last name</th>
     </thead>
 
     <tbody>
       <tr ng-repeat="customer in cc.customersList.list">
-        <td class="active">{{customer.name}}</td>
+        <td class="active">{{customer.first_name}}</td>
+        <td class="active">{{customer.last_name}}</td>
         </tr>
       </tbody>
     </table>
 
   </div>
-
-</div>

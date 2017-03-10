@@ -10,7 +10,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
   function getCustomers() {
     $http({
       method: 'GET',
-      url: '/customers',
+      url: '/warehouse-data/customers',
     }).then(function(response) {
       console.log('/customers response from factory: ', response);
       console.log('/customers response.data from factory: ', response.data);
@@ -22,7 +22,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
   function getWarehouses() {
     $http({
       method: 'GET',
-      url: '/warehouse',
+      url: '/warehouse-data/warehouse',
     }).then(function(response) {
       console.log('/warehouse response from factory: ', response);
       console.log('/warehouse response.data from factory: ', response.data);
@@ -34,7 +34,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
   function getOrders() {
     $http({
       method: 'GET',
-      url: '/orders',
+      url: '/warehouse-data/orders',
     }).then(function(response) {
       console.log('/orders response from factory: ', response);
       console.log('/orders response.data from factory: ', response.data);

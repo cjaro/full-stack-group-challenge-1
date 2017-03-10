@@ -43,4 +43,10 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
     }); // end then function response
   } // end function getTasks()
 
+return {
+  getCustomers: getCustomers,
+  getWarehouses: getWarehouses,
+  getOrders: getOrders
+};
+
 }]); // end myApp.factory

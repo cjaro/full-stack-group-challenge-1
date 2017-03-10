@@ -39,7 +39,7 @@ router.get('/warehouse', function(req, res) {
       console.log('Error connecting to database: ', err);
       res.sendStatus(500);
     } else {
-      client.query('SELECT warehouse, fulfillment_days FROM warehouse;', function(err, result){
+      client.query('SELECT warehouse.fulfillment_days, warehouse.warehouse, products.description FROM warehouse JOIN warehouse_product ON warehouse.id = warehouse_product.warehouse_id JOIN products ON products.id = warehouse_product.product_id GROUP BY warehouse.id, products.description;', function(err, result){
         done();
         if(err) {
           console.log('Error making the database query: ', err);
@@ -54,7 +54,6 @@ router.get('/warehouse', function(req, res) {
 // WAREHOUSE VIEW
 // SELECT *
 // FROM warehouse;
-
 
 router.get('/orders', function(req, res) {
   pool.connect(function(err, client, done){

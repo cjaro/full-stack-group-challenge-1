@@ -55,6 +55,7 @@ router.get('/warehouse', function(req, res) {
 // SELECT *
 // FROM warehouse;
 
+
 router.get('/orders', function(req, res) {
   pool.connect(function(err, client, done){
     if(err) {

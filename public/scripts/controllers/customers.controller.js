@@ -4,4 +4,4 @@ myApp.controller('CustomerController', ['$http', 'WarehouseFactory', function($h
 
   self.customersList = WarehouseFactory.allCustomers; //placeholder
 
-});
+}]);

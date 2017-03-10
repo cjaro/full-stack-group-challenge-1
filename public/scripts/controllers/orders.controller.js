@@ -2,8 +2,10 @@ myApp.controller('OrderController', ['WarehouseFactory', function(WarehouseFacto
 
   var self = this;
 
+  self.getOrderData();
+  
   self.getOrderData = function (){
-    
+    WarehouseFactory.getOrders();
   }
 
 }])

@@ -3,7 +3,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
   // var testArrayVariable = ['queso', 'bagel', 'donald bagel', 'salsa', 'carolyn'];
   // testArrayVariable.pop();
   //
-  // var factoryTasks = { list: [] };
+  var factoryTasks = { list: [] };
 
   // getTasks();
 

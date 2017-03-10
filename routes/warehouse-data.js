@@ -11,15 +11,19 @@ var config = {
 
 var pool = new pg.Pool(config);
 
-// router.get('/');
+router.get('/warehouse');
 
 // WAREHOUSE VIEW
 // SELECT *
 // FROM warehouse;
 
+router.get('/customer');
+
 // CUSTOMER VIEW
 // SELECT *
 // FROM customers;
+
+router.get('/orders');
 
 // ORDERS VIEW
 // SELECT *

@@ -5,16 +5,4 @@ myApp.controller('CustomerController', ['WarehouseFactory', function(WarehouseFa
   WarehouseFactory.getCustomers();
   self.customersObject = WarehouseFactory.customersObject;
 
-
-  // self.dummyCustomers = [
-  //   {
-  //     first_name: 'Carolyn',
-  //     last_name: 'Sucks'
-  //   },
-  //   {
-  //     first_name: 'Donald',
-  //     last_name: 'Bagel'
-  //   }
-  // ];
-
 }]);

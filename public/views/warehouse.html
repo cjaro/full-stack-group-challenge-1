@@ -1,14 +1,20 @@
+
+<label for="search">Search</label>
+<input type="text" name="search" class="form-control" ng-model="wc.searchText" placeholder="Search Here"/>
+
 <table>
   <thead>
     <tr>
       <th>Warehouse Name</th>
       <th>Fulfillment Days</th>
+      <th>On Hand</th>
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="data in wc.warehousesObject.list">
+    <tr ng-repeat="data in wc.warehousesObject.list | filter:wc.searchText">
       <td>{{data.warehouse}}</td>
       <td>{{data.fulfillment_days}}</td>
+      <td>{{data.on_hand}}</td>
     </tr>
   </tbody>
 </table>

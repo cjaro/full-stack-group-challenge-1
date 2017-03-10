@@ -1,9 +1,4 @@
-<h1>this is the customers view</h1>
 
-<h1>Customers</h1>
-{{dummyCustomers}}
-
-<div class="container">
 
     <table class="table table-bordered">
       <thead>
@@ -12,11 +7,9 @@
     </thead>
 
     <tbody>
-      <tr ng-repeat="customer in cc.customersList.list">
-        <td class="active">{{customer.first_name}}</td>
-        <td class="active">{{customer.last_name}}</td>
+      <tr ng-repeat="data in cc.customersObject.list">
+        <td class="active">{{data.first_name}}</td>
+        <td class="active">{{data.last_name}}</td>
         </tr>
       </tbody>
     </table>
-
-  </div>

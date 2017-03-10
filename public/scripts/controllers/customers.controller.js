@@ -1,18 +1,20 @@
-myApp.controller('CustomerController', ['$http', 'WarehouseFactory', function($http, WarehouseFactory){
+myApp.controller('CustomerController', ['WarehouseFactory', function(WarehouseFactory){
   console.log('customer controller loaded');
   var self = this;
 
-  // self.customersList = WarehouseFactory.allCustomers; //placeholder
+  WarehouseFactory.getCustomers();
+  self.customersObject = WarehouseFactory.customersObject;
 
-  self.dummyCustomers = [
-    {
-      first_name: Carolyn,
-      last_name: Sucks
-    },
-    {
-      first_name: Donald,
-      last_name: Bagel
-    }
-  ];
+
+  // self.dummyCustomers = [
+  //   {
+  //     first_name: 'Carolyn',
+  //     last_name: 'Sucks'
+  //   },
+  //   {
+  //     first_name: 'Donald',
+  //     last_name: 'Bagel'
+  //   }
+  // ];
 
 }]);

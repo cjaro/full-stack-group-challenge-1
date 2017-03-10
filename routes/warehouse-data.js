@@ -17,7 +17,7 @@ router.get('/warehouse');
 // SELECT *
 // FROM warehouse;
 
-router.get('/customer');
+router.get('/customers');
 
 // CUSTOMER VIEW
 // SELECT *

@@ -11,7 +11,7 @@
     <script src="scripts/controllers/warehouse.controller.js" charset="utf-8"></script>
     <script src="scripts/controllers/customers.controller.js" charset="utf-8"></script>
     <script src="scripts/controllers/orders.controller.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="/vendors/bootstrap.min.css">
+    <link rel="stylesheet" href="/vendors/bootstrap.min.css" />
     <link rel="stylesheet" href="/styles/stylesheet.css">
 
   </head>
@@ -19,8 +19,10 @@
   <body ng-app="warehouseApp">
 
     <header class="jumbotron text-center" ng-include="'/views/templates/header.html'"></header>
-    <nav class="navbar navbar-default" ng-include="'/views/templates/nav.html'"></nav>
-    <main ng-view></main>
+    <div class="container">
+      <nav ng-include="'/views/templates/nav.html'"></nav>
+      <main ng-view></main>
+    </div>
 
   </body>
 

@@ -11,7 +11,7 @@ var config = {
 
 var pool = new pg.Pool(config);
 
-router.get('/');
+// router.get('/');
 
 // WAREHOUSE VIEW
 // SELECT *

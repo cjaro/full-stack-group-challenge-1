@@ -1,17 +1,9 @@
-myApp.controller('WarehouseController', function(){
+myApp.controller('WarehouseController', ['WarehouseFactory', function(WarehouseFactory){
 
   var self=this;
 
-  self.dummyData = [
-    {
-    warehouse: 'alpha',
-    days: 3
-  },
-  {
-    warehouse: 'beta',
-    days: 4
-  }
-]
+  WarehouseFactory.getWarehouses();
+  self.warehousesObject = WarehouseFactory.warehousesObject;
 
 
-});
+}]);

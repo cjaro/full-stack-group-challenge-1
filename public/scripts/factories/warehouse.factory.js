@@ -1,11 +1,8 @@
 myApp.factory('WarehouseFactory', ['$http', function($http) {
 
-  // var testArrayVariable = ['queso', 'bagel', 'donald bagel', 'salsa', 'carolyn'];
-  // testArrayVariable.pop();
-  //
-  // var factoryTasks = { list: [] };
-
-  // getTasks();
+  var warehousesObject = { list: [] };
+  var customersObject = { list: [] };
+  var ordersObject = { list: [] };
 
   function getCustomers() {
     $http({
@@ -15,7 +12,7 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
       console.log('/customers response from factory: ', response);
       console.log('/customers response.data from factory: ', response.data);
       console.log(response.data); // .data is required because angular adds other things to the response
-      factoryTasks.list = response.data; // you need .list or it will not return the data.
+      customersObject.list = response.data; // you need .list or it will not return the data.
     }); // end then function response
   } // end function getTasks()
 
@@ -24,10 +21,9 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
       method: 'GET',
       url: '/warehouse-data/warehouse',
     }).then(function(response) {
-      console.log('/warehouse response from factory: ', response);
       console.log('/warehouse response.data from factory: ', response.data);
       console.log(response.data); // .data is required because angular adds other things to the response
-      factoryTasks.list = response.data; // you need .list or it will not return the data.
+      warehousesObject.list = response.data; // you need .list or it will not return the data.
     }); // end then function response
   } // end function getTasks()
 
@@ -39,14 +35,17 @@ myApp.factory('WarehouseFactory', ['$http', function($http) {
       console.log('/orders response from factory: ', response);
       console.log('/orders response.data from factory: ', response.data);
       console.log(response.data); // .data is required because angular adds other things to the response
-      factoryTasks.list = response.data; // you need .list or it will not return the data.
+      ordersObject.list = response.data; // you need .list or it will not return the data.
     }); // end then function response
   } // end function getTasks()
 
 return {
+  warehousesObject: warehousesObject,
+  customersObject: customersObject,
+  ordersObject: ordersObject,
   getCustomers: getCustomers,
   getWarehouses: getWarehouses,
-  getOrders: getOrders
+  getOrders: getOrders,
 };
 
 }]); // end myApp.factory

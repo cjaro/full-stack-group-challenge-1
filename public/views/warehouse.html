@@ -6,9 +6,9 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="thing in wc.dummyData">
-      <td>{{thing.warehouse}}</td>
-      <td>{{thing.days}}</td>
+    <tr ng-repeat="data in wc.warehousesObject.list">
+      <td>{{data.warehouse}}</td>
+      <td>{{data.fulfillment_days}}</td>
     </tr>
   </tbody>
 </table>
